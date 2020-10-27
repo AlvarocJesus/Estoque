@@ -1,28 +1,22 @@
 
 exports.up = function(knex) {
-  knex.schema.createTable('client', table => {
-    table.integer('id').increments().primary();
-    table.string('name').notNullable();
+  return knex.schema.createTable('client', table => {
+    table.increments('id').primary();
+    table.string('name').notNullable().unique();
     table.data('aniversario');
+    table.string('phone').notNullable();
     table.string('phone');
-    table.string('endereco')
-    table.string('email')
+    table.string('endereco').notNullable();
+    table.string('email');
 
-    table. compras
-    table.data('data_compra')
-    table.string('product')
-    table.decimal('value', 2, 2)
-    table.string('quantidade_produtos')
-    table.integer('total_value')
-
-    table. parcelas
-    table.string('quantidade_parcelas')
-    table.data('data_vencimento')
-    table.decimal('value_parcela', 2, 2)
-    table.data('pay_day')
+    table.integer('compras_id').notNullable();
+    table.foreign('compras_id').reference('id_compra').inTable('compras');
+    
+    table.integer('parcelas_id').notNullable();
+    table.foreign('parcelas_id').reference('id').inTable('compras');
   })
 };
 
 exports.down = function(knex) {
-  
+  return knex.schema.dropTable('client');
 };
