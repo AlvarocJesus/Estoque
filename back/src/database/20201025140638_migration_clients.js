@@ -13,7 +13,7 @@ exports.up = function(knex) {
     table.foreign('compras_id').reference('id_compra').inTable('compras');
     
     table.integer('parcelas_id').notNullable();
-    table.foreign('parcelas_id').reference('id').inTable('compras');
+    table.foreign('parcelas_id').reference('id_parcelas').inTable('parcelas');
   })
 };
 
