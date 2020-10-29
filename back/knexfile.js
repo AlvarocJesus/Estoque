@@ -10,8 +10,7 @@ module.exports = {
       password: 'alvim1234'
     },
     migrations: {
-      tableName: './src/database/migrations',
-      directory: `${__dirname}/src/database`
+      directory: `${__dirname}/src/database/migrations`
     }
   },
 
