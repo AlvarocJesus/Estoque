@@ -7,7 +7,7 @@ module.exports = {
     connection: {
       database: 'bazargmc',
       user:     'postgres',
-      password: 'alvim1234'
+      password: '0000'
     },
     migrations: {
       directory: `${__dirname}/src/database/migrations`

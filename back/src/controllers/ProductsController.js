@@ -1,27 +1,25 @@
-const connection = require('../database/connection');
+const {Request, Response} = require('express');
+const knex = require('../database');
 
 module.exports = {
-    index(req, res) {
-        const products = connection('products').select([
-            'products.name',
-            'products.price',
-            'products.table',
-            'products.unit_price',
-            'products.supplier_name',
-            'products.price_cost'
-        ]);
+    index(req=Request, res=Response) {
+        const products = connection('products').select('points.*');
+        // const products = knex('users');
 
-        return res.json(products);
+        return res.status(201).json(products);
 
     },
 
-    create(req, res) {
+    create(req=Request, res=Response) {
         const data = req.body;
 
-        return res.json(data);
+        // insere os dados no banco de dados
+        // knex.insert(data);
+
+        return res.status(201).json(data);
     },
 
-    // put(req, res){
+    // update(req, res){
 
     // }
 }
