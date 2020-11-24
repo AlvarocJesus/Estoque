@@ -12,13 +12,33 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    background: grey;
+
+    padding: 25px;
+}
+
+header button{
+    padding: 10px;
+
+    cursor: pointer;
 }
 
 main{
+    display: flex;
     align-items: center;
     justify-content: center;
+
+    margin-top: 50px;
 }
 
 main table{
+    text-align: center;
+}
+
+main table, th, tr, td{
     border: 1px solid black;
+    border-collapse: collapse;
+
+    padding: 5px;
 }
