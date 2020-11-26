@@ -3,11 +3,54 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/addProduct.css">
 
         <title>Adicionar</title>
     </head>
     <body>
-        <h1>Deu certo!!</h1>
+        <header>
+            <a href="./index.html">
+                <img src="../icons/arrow-left.svg" alt="">
+            </a>
+        </header>
+
+        <form>
+            <div>
+                <label for="name">Nome</label>
+                <input type="text">
+            </div>
+
+            <div>
+                <label for="preco">Preço</label>
+                <input type="text">
+            </div>
+            
+
+            <div>
+                <label for="quantidade">Quantidade</label>
+                <input type="text">
+            </div>
+            
+
+            <div>
+                <label for="valor-unitario">Preço Unitario</label>
+                <input type="text">
+            </div>
+            
+
+            <div>
+                <label for="nome-fornecedor">Nome do Fornecedor</label>
+                <input type="text">
+            </div>
+            
+
+            <div>
+                <label for="preco-custo">Preço de Custo</label>
+                <input type="text">
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </form>
 
         <script src="../scripts/addProduct.js"></script>
     </body>
