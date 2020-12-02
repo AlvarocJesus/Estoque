@@ -1,7 +1,6 @@
 import api from '../service/api.js';
-// const api = require('../service/api.js');
 
-api.get('/list')
+api.get('list')
     .then((res) => {
         const { name, preco, precoCusto, precoUnitario, quantidade, fornecedor } = res.data;
 
@@ -18,9 +17,6 @@ api.get('/list')
         const celula2 = document.createElement("td");
         celula2.innerHTML = quantidade;
 
-        const celula3 = document.createElement("td");
-        celula3.innerHTML = precoUnitario;
-
         const celula4 = document.createElement("td");
         celula4.innerHTML = fornecedor;
 
@@ -31,9 +27,8 @@ api.get('/list')
             linha.appendChild(celula);
             linha.appendChild(celula1);
             linha.appendChild(celula2);
-            linha.appendChild(celula3);
             linha.appendChild(celula4);
             linha.appendChild(celula5);
 
     })
-    // .catch((err) => console.log(`Erro ${err}`))
+    .catch((err) => console.log(`Erro ${err}`))
