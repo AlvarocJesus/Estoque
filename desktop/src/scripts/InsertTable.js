@@ -2,33 +2,38 @@ import api from '../service/api.js';
 
 api.get('list')
     .then((res) => {
-        const { name, preco, precoCusto, precoUnitario, quantidade, fornecedor } = res.data;
+        const product = res.data;
+        console.log(res)
+        console.log(product)
 
         const tabela = document.getElementById('tabela');
 
-        const linha = document.createElement("tr");
 
-        const celula = document.createElement("td");
-        celula.innerHTML = name;
+        product.map(item => {
+            const linha = document.createElement("tr");
 
-        const celula1 = document.createElement("td");
-        celula1.innerHTML = preco;
+            const celula = document.createElement("td");
+            celula.innerHTML = item.name;
 
-        const celula2 = document.createElement("td");
-        celula2.innerHTML = quantidade;
+            const celula1 = document.createElement("td");
+            celula1.innerHTML = item.preco;
 
-        const celula4 = document.createElement("td");
-        celula4.innerHTML = fornecedor;
+            const celula2 = document.createElement("td");
+            celula2.innerHTML = item.quantidade;
 
-        const celula5 = document.createElement("td");
-        celula5.innerHTML = precoCusto;
+            const celula4 = document.createElement("td");
+            celula4.innerHTML = item.fornecedor;
 
-        tabela.appendChild(linha);
-            linha.appendChild(celula);
-            linha.appendChild(celula1);
-            linha.appendChild(celula2);
-            linha.appendChild(celula4);
-            linha.appendChild(celula5);
+            const celula5 = document.createElement("td");
+            celula5.innerHTML = item.precoCusto;
+
+            tabela.appendChild(linha);
+                linha.appendChild(celula);
+                linha.appendChild(celula1);
+                linha.appendChild(celula2);
+                linha.appendChild(celula4);
+                linha.appendChild(celula5);
+        })
 
     })
     .catch((err) => console.log(`Erro ${err}`))
