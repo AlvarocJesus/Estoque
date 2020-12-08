@@ -1,41 +1,46 @@
 import api from '../service/api.js';
 
-const name = document.getElementById('name').value;
+const name = document.getElementById('name');
 
-const preco = parseInt(document.getElementById('preco').value); //numerico
+const preco = document.getElementById('preco');
     
-const quantidade = parseInt(document.getElementById('quantidade').value); //numerico
+const quantidade = document.getElementById('quantidade');
 
-const precoUnitario = parseInt(document.getElementById('valor-unitario').value); //numerico
+const precoUnitario = document.getElementById('valor-unitario');
 
-const fornecedor = document.getElementById('fornecedor').value;
+const fornecedor = document.getElementById('fornecedor');
 
-const precoCusto = parseInt(document.getElementById('preco-custo').value); //numerico
+const precoCusto = document.getElementById('preco-custo');
 
+function SubmitData(){
+    // alert(`produto: ${name.value} \n preco: ${preco.value} \n quantidade: ${quantidade.value} \n precoUnitario: ${precoUnitario.value} \n fornecedor: ${fornecedor.value} \n precoCusto: ${precoCusto.value} \n`);
 
-api.post('/add', {
-    name: name,
-    preco: preco,
-    quantidade: quantidade,
-    precoUnitario: precoUnitario,
-    fornecedor: fornecedor,
-    precoCusto: precoCusto,
-})
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
+    api.post('/add', {
+        name: name,
+        preco: preco,
+        quantidade: quantidade,
+        precoUnitario: precoUnitario,
+        fornecedor: fornecedor,
+        precoCusto: precoCusto,
+    })
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+}
 
-    // "fornecedor", "name", "preco", "precoCusto", "precoUnitario", "quantidade"
-    
-    /* async function SubmitData(){
-        await api.post('/add', {
-            name: name,
-            preco: preco,
-            quantidade: quantidade,
-            precoUnitario: precoUnitario,
-            fornecedor: fornecedor,
-            precoCusto: precoCusto,
-        })
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
-    }
-    SubmitData(); */
+// // console.log(name);
+// // console.log(preco);
+// // console.log(quantidade);
+// // console.log(precoUnitario);
+// // console.log(fornecedor);
+// // console.log(precoCusto);
+
+// api.post('/add', {
+//     name: name,
+//     preco: preco,
+//     quantidade: quantidade,
+//     precoUnitario: precoUnitario,
+//     fornecedor: fornecedor,
+//     precoCusto: precoCusto,
+// })
+//     .then(res => console.log(res))
+//     .catch(err => console.log(err))
