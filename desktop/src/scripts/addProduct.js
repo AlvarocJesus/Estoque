@@ -20,6 +20,12 @@ function SubmitData(){
         fornecedor: fornecedor.value,
         precoCusto: precoCusto.value,
     })
-        .then(res => console.log(res))
+        .then(res => {
+            
+            // if(res.statusCode === 200){
+            //     window.location.href = '../views/index.html';
+            //     console.log(`${resposta}, deu certo`)
+            // }
+        })
         .catch(err => console.log(err))
 }

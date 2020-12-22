@@ -3,8 +3,6 @@ import api from '../service/api.js';
 api.get('list')
     .then((res) => {
         const product = res.data;
-        console.log(res)
-        console.log(product)
 
         const tabela = document.getElementById('tabela');
 
