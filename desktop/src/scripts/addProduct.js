@@ -10,7 +10,8 @@ const precoCusto = document.getElementById('preco-custo');
 const btn = document.getElementById('btn');
 btn.addEventListener('click', SubmitData);
 
-function SubmitData(){
+function SubmitData(e){
+    e.preventDefault();
 
     api.post('/add', {
         name: name.value,
@@ -22,10 +23,10 @@ function SubmitData(){
     })
         .then(res => {
             
-            // if(res.statusCode === 200){
-            //     window.location.href = '../views/index.html';
-            //     console.log(`${resposta}, deu certo`)
-            // }
+            if(res.statusCode === 200){
+                window.location.href = `${__dirname}/src/views/index.html`;
+                console.log(`${resposta}, deu certo`)
+            }
         })
         .catch(err => console.log(err))
 }

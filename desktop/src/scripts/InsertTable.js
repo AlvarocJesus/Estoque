@@ -3,12 +3,14 @@ import api from '../service/api.js';
 api.get('list')
     .then((res) => {
         const product = res.data;
-
-        const tabela = document.getElementById('tabela');
-
-
+        const value = 0
+        
         product.map(item => {
             const linha = document.createElement("tr");
+            const check = document.createElement('input');
+            check.type = 'checkbox';
+            check.setAttribute("name", "item")
+            check.value = value + 1;
 
             const celula = document.createElement("td");
             celula.innerHTML = item.name;
@@ -25,7 +27,15 @@ api.get('list')
             const celula5 = document.createElement("td");
             celula5.innerHTML = item.precoCusto;
 
+            // check.name = celula + [];
+            
+            if(check.value === true){
+                console.log(check.value);
+                check.style.display = "none";
+            }
+
             tabela.appendChild(linha);
+                linha.appendChild(check);
                 linha.appendChild(celula);
                 linha.appendChild(celula1);
                 linha.appendChild(celula2);
