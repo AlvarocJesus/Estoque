@@ -1,8 +1,8 @@
 const { app, BrowserWindow } = require('electron');
 
 require('electron-reload')(__dirname, {
-    // electron: require(`${__dirname}/node_modules/electron`),
-    electron: require('electron-reload')
+    electron: require(`${__dirname}/node_modules/electron`),
+    // electron: require('electron-reload')
 })
 
 function createWindow(){

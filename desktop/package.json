@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "electron ."
+    "dev": "nodemon --exec electron ."
   },
   "keywords": [],
   "author": "",
@@ -15,5 +15,8 @@
     "electron": "^10.1.5",
     "electron-reload": "^1.5.0",
     "fuzzy-search": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
