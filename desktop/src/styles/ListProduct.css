@@ -1,0 +1,45 @@
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: whitesmoke;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: gray;
+
+  padding: 25px;
+}
+
+header button{
+  padding: 10px;
+
+  cursor: pointer;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 50px;
+}
+
+main table{
+  text-align: center;
+}
+
+main table, th, tr, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+
+  padding: 5px;
+}
