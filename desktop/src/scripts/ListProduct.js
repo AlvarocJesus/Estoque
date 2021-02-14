@@ -1,7 +1,6 @@
 import api from '../service/api.js';
 
 const selectedItens = [];
-
 const index = document.getElementById('finishBuy');
 
 index.addEventListener('click', function(){
@@ -13,12 +12,15 @@ api.get('list')
 		const product = res.data;
 
 		product.map(item => {
-			const id = item.id.value;
-      console.log(id)
+			const id = item.id;
+      // console.log(id);
+			// console.log(selectedItens);
+
 			const linha = document.createElement("tr");
       linha.setAttribute('value', id);
       linha.addEventListener('click', function(){
         selectedItens.push(id);
+				console.log(selectedItens);
       });
 
 			const celula = document.createElement("td");
@@ -42,7 +44,6 @@ api.get('list')
 				linha.appendChild(celula2);
 				linha.appendChild(celula4);
 				linha.appendChild(celula5);
-
 		})
 	})
-	.catch((err) => console.log(`Erro ${err}`))
+	.catch((err) => console.log(`Erro ${err}`));

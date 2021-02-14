@@ -1,4 +1,3 @@
-// const {Request, Response} = require('express');
 const knex = require('../database/connection');
 
 module.exports = {
@@ -11,8 +10,7 @@ module.exports = {
     },
 
     async create(req, res, next) {
-        // const data = req.body;
-        // return res.json(data);
+        
         try {
             // captura dos dados do corpo da requisicao
             const { 
