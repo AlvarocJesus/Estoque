@@ -11,10 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.0",
-    "electron": "^10.1.5",
-    "electron-reload": "^1.5.0",
-    "nodemon": "^2.0.7"
+    "axios": "^0.21.1",
+    "remixicon": "^2.5.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "electron": "^12.0.5",
+    "nodemon": "^2.0.7"
+  }
 }

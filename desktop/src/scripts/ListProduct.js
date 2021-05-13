@@ -1,11 +1,11 @@
 import api from '../service/api.js';
 
 const selectedItens = [];
-const index = document.getElementById('finishBuy');
+const finishBuy = document.getElementById('finishBuy');
 
-index.addEventListener('click', function(){
-  window.location.href = '../views/index.html';
-})
+finishBuy.addEventListener('click', function(){
+	window.location.href = '../views/index.html';
+});
 
 api.get('list')
   .then((res) => {
@@ -13,8 +13,6 @@ api.get('list')
 
 		product.map(item => {
 			const id = item.id;
-      // console.log(id);
-			// console.log(selectedItens);
 
 			const linha = document.createElement("tr");
       linha.setAttribute('value', id);
@@ -47,3 +45,5 @@ api.get('list')
 		})
 	})
 	.catch((err) => console.log(`Erro ${err}`));
+
+module.export = selectedItens;

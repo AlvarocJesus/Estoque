@@ -1,45 +1,89 @@
 *{
-    border: 0;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+	border: 0;
+  box-sizing: border-box;
 }
 
 body{
-    background-color: whitesmoke;
+	display: flex;
+	background: #f8f8fb;
 }
 
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    background: gray;
-
-    padding: 25px;
+.navigationbar{
+  background: #373b53;
+	height: 100vh;
+	width: 100px;
 }
 
-header button{
-    padding: 10px;
+.logoContainer{
+	background: #6f52ed;
+	width: 100px;
+	height: 100px;
 
-    cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    margin-top: 50px;
+.ContentContainer{
+	margin-left: 60px;
 }
 
-main table{
-    text-align: center;
+.titleBoard{
+	font-size: 30px;
+	font-weight: 600;
 }
 
-main table, th, tr, td{
-    border: 1px solid black;
-    border-collapse: collapse;
+.buttonAdd{
+	width: 225px;
+	height: 50px;
+	border-radius: 5px;
+	background: #6f52ed;
+	color: #ffffff;
 
-    padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.textButton{
+	padding: 14px 20px 14px 14px;
+
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 17px;
+}
+
+.iconButton{
+	height: 20px;
+	width: 20px;
+	padding: 15px 20px 14px 14px;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+table th, td{
+	border: 1px solid black;
+	height: 48px;
+	width: 125px;
+}
+
+table .nameheader, .priceheader, .amountheader{
+	filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.16));
+
+	font-family: sans-serif;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+table .namecolumn, .pricecolumn, .amountcolums{
+	font-family: sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: normal;
 }

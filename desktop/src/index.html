@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles/index.css">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<title>Estoque</title>
+</head>
+
+<body>
+	<div class="navigationbar">
+		<div class="logoContainer">Logo</div>
+
+		<i class="ri-bar-chart-fill"></i>
+	</div>
+
+	<div class="ContentContainer">
+		<h1 class="titleBoard">Produtos</h1>
+	
+		<button type="button" class="buttonAdd">
+			<img src="./icons/plus.svg" alt="plus">
+			<span class="textButton">Criar Novo Produto</span>
+		</button>
+
+		<div class="listproducts">
+			<table id="table">
+				<tr class="headerfixed">
+					<th class="nameheader">Nome</th>
+					<th class="priceheader">Preço</th>
+					<th class="amountheader">Quantidade</th>
+				</tr>
+				<tr>
+					<th class="namecolumn">Nome</th>
+					<th class="pricecolumn">R$ 15,00</th>
+					<th class="amountcolums">15</th>
+				</tr>
+				<tr>
+					<th class="namecolumn">Nome</th>
+					<th class="pricecolumn">R$ 15,00</th>
+					<th class="amountcolums">15</th>
+				</tr>
+				<tr>
+					<th class="namecolumn">Nome</th>
+					<th class="pricecolumn">R$ 15,00</th>
+					<th class="amountcolums">15</th>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<script type="module" src="../scripts/index.js"></script>
+</body>
+
+</html>
