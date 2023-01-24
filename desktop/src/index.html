@@ -9,30 +9,28 @@
 
   <body>
     <nav id="menu">
-			<a href="./index.html">Listar Produto</a>
-			<a href="./views/AddProduct.html">Cadastrar Produto</a>
-			<a href="./views/AddClient.html">Clientes</a>
-		</nav>
+      <a href="./index.html">Listar Produto</a>
+      <a href="./views/AddProduct.html">Cadastrar Produto</a>
+      <a href="./views/AddClient.html">Clientes</a>
+    </nav>
 
-		<h3>Produtos</h3>
+    <h3>Produtos</h3>
 
-		<table class="table">
-			<tbody>
-				<tr>
-					<th>a</th>
-					<th>a</th>
-				</tr>
-				<tr>
-					<td>b</td>
-					<td>b</td>
-				</tr>
-				<tr>
-					<td>c</td>
-					<td>c</td>
-				</tr>
-			</tbody>
-		</table>
+    <main id="corpo">
+      <table class="table">
+        <tr>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Fornecedor</th>
+          <th>Preço de Custo</th>
+        </tr>
+      </table>
+
+      <button id="finishBuy">Finalizar Lista</button>
+    </main>
 
     <script type="module" src="../scripts/index.js"></script>
+    <script type="module" src="./scripts/Product.js"></script>
   </body>
 </html>
